@@ -10,11 +10,7 @@ This project provides two implementations of Lp-Box ADMM:
 * [Basic idea](#basic-idea)
 
 * [Python usage](#python-usage)
-
 * [Applications](#application)
-
-* [Aplications and extensions](#application-extension)
-
 * [Citation](#citation)
 
 <!---
