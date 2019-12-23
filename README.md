@@ -1,7 +1,7 @@
 # Lp-Box ADMM for Integer Programming
 [Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method used for interger programming. Any problems with discrete constraints can be solved using Lp-Box ADMM.  Since any discrete constraint can be easily transformed to binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
 $$
-  \mathop{\min}_x \ f(x) \quad \text{s.t.} \ x \in {0,1}^n, x\in \mathcal{C}
+  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
 To solve the binary discrete constraint, we propose to replace it with an equivalent set of continuous constraints.  
