@@ -4,10 +4,9 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 * [Matlab](matlab): full codes and full demos to reproduce all reported results in the manuscript.
 * [Python](python): full codes and one simple demo to demonstrate the usage. 
 
-# Contents
+## Contents
 
 * [Basic idea](#basic-idea)
-
 * [Python usages](#python-for-BQP)
   * [Binary quadratic programming (BQP)](#BQP)
   * [Demo of image segmentation](#demo-image-seg)
