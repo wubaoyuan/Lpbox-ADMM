@@ -7,6 +7,8 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 ## Contents
 
 * [Basic idea](#basic-idea)
+  * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+  * [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
 
 * [Python usage](#python-usage)
   * [Binary quadratic programming](#BQP)
@@ -29,7 +31,8 @@ $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
-To solve the binary discrete constraint, we propose to replace it with an equivalent set of continuous constraints.  
+#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
 $$  
@@ -40,6 +43,10 @@ The geometric illustration of the equivalence between lpbox intersection and the
 <div align="center">
 <img src="/lpbox.png">
 </div>
+
+#### [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
+
+zsf sge 
 
 
 ## [Python usage](#python-usage)
