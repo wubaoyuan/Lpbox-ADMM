@@ -7,14 +7,14 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 ## Contents
   
 * [Basic idea](#basic-idea)
-  * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+  [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+
   * [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
 
 * [Python usage](#python-usage)
   * [Binary quadratic programming](#BQP)
   * [Demo of image segmentation](#demo-image-seg)
 
-  
 * [Aplications and extensions](#application-extension)
   * [Deep model compression](#deep-model-compression)
   * [MAP inference](#map-inference)
