@@ -4,10 +4,10 @@ import scipy.sparse.linalg as linalg
 from scipy.sparse import csc_matrix
 
 
-''' 
+"""
 min_x (x^T A x + b^T x) such that x is {0,1}^n
 ADMM update steps with x0 being feasible and binary
-'''
+"""
 def ADMM_bqp_unconstrained(A, b, all_params=None):
     initial_params = {'std_threshold':1e-6, 'gamma_val':1.0, 'gamma_factor':0.99, \
           'initial_rho':5, 'learning_fact':1+3/100, 'rho_upper_limit':1000, 'history_size':5, 'rho_change_step':5, \
@@ -113,10 +113,9 @@ def ADMM_bqp_unconstrained(A, b, all_params=None):
     
     
 
-'''
+"""
 min_x x^T A x+b^Tx such that x is {0,1}^n; Cx=d
-
-'''
+"""
 def ADMM_bqp_linear_eq(A,b,C,d, all_params=None):
 
     initial_params = {'stop_threshold':1e-4,'std_threshold':1e-6,'gamma_val':1.6,'gamma_factor':0.95, 'rho_change_step':5, \
@@ -231,10 +230,10 @@ def ADMM_bqp_linear_eq(A,b,C,d, all_params=None):
 
 
 
-'''
+"""
 This function implement lpbox ADMM to solve the following problem
 min_x x'*A*x+b'*x such that x is {0,1}^n; Ex<=f
-'''
+"""
 def ADMM_bqp_linear_ineq(A,b,E,f,all_params):
 
     initial_params = {'stop_threshold':1e-4,'std_threshold':1e-6,'gamma_val':1.6,'gamma_factor':0.95, 'rho_change_step':5, \
@@ -356,10 +355,10 @@ def ADMM_bqp_linear_ineq(A,b,E,f,all_params):
     return best_sol,x_sol,y1,y2,time_elapsed
 
 
-'''
+"""
 This function implement lpbox ADMM to solve the following problem
 min_x x'*A*x+b'*x such that x is {0,1}^n; Cx=d, Ex<=f
-'''
+"""
 def ADMM_bqp_linear_eq_and_uneq(A,b,C,d,E,f, all_params=None):
 
     initial_params = {'stop_threshold':1e-4,'std_threshold':1e-6,'gamma_val':1.6,'gamma_factor':0.95, 'rho_change_step':5, \
