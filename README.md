@@ -6,7 +6,7 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 
 ## Basic idea
 
-[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method used for interger programming. Any problems with discrete constraints can be solved using Lp-Box ADMM.  Since any discrete constraint can be easily transformed to binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
+[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
 $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
@@ -25,36 +25,37 @@ The geometric illustration of the equivalence between lpbox intersection and the
 
 
 ## Binary Quadratic Programming (BQP) 
-In this project, we specify the optimization object as the QP problem with binary discrete constraint. The BQP problem can be denoted as follows:
+In this project, we specify the optimization object as the QP problem with binary constraints. The BQP problem can be denoted as follows:
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
 $$
 
-which includes binary discrete constraint, linear equation constraint and linear inequation constraint. 
+which includes the binary constraint, linear equality and inequality constraint. 
 
 ## Python usages
-To briefly show how to use this algorithm, we also present three python interfaces for the BQP problems.  
-1. unconstrained BQP  
+To facilitate the usages of the Lp-Box ADMM method, we provide four python functions for the BQP problems with different constraints.  
+* unconstrained BQP  
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n
 $$  
 
-2. BQP with linear equality constraints 
+
+* BQP with linear equality constraints 
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1
 $$
 
-3. BQP with linear inequality constraints 
+* BQP with linear inequality constraints 
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_2 x \leq d_2
 $$  
 
-4. BQP with linear equality and inequality constraints 
+* BQP with linear equality and inequality constraints 
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
 $$  
 
-To use these three interfaces, you need to firstly add these codes to you project.
+To use these functions, you need to import them to your demo, as follows
 ```
 from functions.lpbox_admm import ADMM_bqp_unconstrained
 from functions.lpbox_admm import ADMM_bqp_linear_eq
