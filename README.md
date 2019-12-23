@@ -58,7 +58,7 @@ The above problem can be easily solved by the alternating direction method of mu
 ## [Python usage](#python-usage)
 [[back to top](#)]
 
-### [Binary quadratic programming](#binary-quadratic-programming)
+#### [Binary quadratic programming](#binary-quadratic-programming)
 Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
@@ -94,7 +94,7 @@ $$
 -->
 
 
-### [Demo of image segmentation](#demo-of-image-segmentation)
+#### [Demo of image segmentation](#demo-of-image-segmentation)
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
