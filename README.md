@@ -1,9 +1,11 @@
 # Lp-Box ADMM for Integer Programming
 
-[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. 
+[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming (IP). 
 This project provides two implementations of Lp-Box ADMM:
 * [Matlab](matlab): full codes and full demos to reproduce all reported results in the manuscript.
 * [Python](python): full codes and one simple demo to demonstrate the usage. 
+
+**IMPORTANT NOTE:** We have just provided the implementation of Lp-Box ADMM for the BQP problem. However, Lp-Box ADMM can be naturally applied to ANY IP tasks. Welcome to contribute your IP tasks and implementations to this project. 
 
 ## Contents
   
