@@ -76,7 +76,8 @@ The randomly initialized image and the segmentation result are shown as follows
 </div>
 
 ## Aplications and extensions
-1. #### [Model compression for deep neural networks](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019)
+
+#### 1. [Model compression for deep neural networks](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019)
 
 We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
 
@@ -86,6 +87,19 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
 
+#### MAP inference for probabilistic graphical models
+
+MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph), as follows
+$$
+\text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\g_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\g_{\alpha}).
+$$
+
+30. MAP Inference via L2-Sphere Linear Program Reformulation
+      Baoyuan Wu, Li Shen, Tong Zhang, Bernard Ghanem
+        Accepted to International Journal of Computer Vision (IJCV).
+      (This work proposed a equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT           solution. Codes will be released soon.)
+      
+      
 
 ## Citation
 If you adopt the Lp-Box ADMM algorithm in your project, please cite as follows.
