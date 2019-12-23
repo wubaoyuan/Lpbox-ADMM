@@ -40,7 +40,7 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## [Python usages for binary quadratic programming (BQP)](#python-for-BQP) 
+## [Python usages](#python-for-BQP) 
 
 ### [Binary quadratic programming (BQP)](#BQP)
 Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
@@ -78,7 +78,7 @@ $$
 -->
 
 
-### [Demo](#demo-image-seg)
+### [Demo of image segmentation](#demo-image-seg)
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
