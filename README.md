@@ -42,7 +42,7 @@ $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
 $$  
 
-where $\[0,1\]^n$ is called box-constraint, and $\{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ is denoted as $\ell_p$-norm constraint.
+where $\mathcal{S}_b = \[0,1\]^n$ is called box-constraint, and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ is denoted as $\ell_p$-norm constraint.
 The geometric illustration of the equivalence between lpbox intersection and the set of binary points is presented as follows. For clarity, we just show the cases when p={1,2,5}
 
 <div align="center">
@@ -50,8 +50,12 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 #### [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
+We further introduce two extra variables $y_1$ and $y_2$ to split the constraints onto different variables, such that the constraints can be iteratively/gradually satisfied, as follows
+$$
+  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}, x=y_1, x=y_2, y_1 \in \mathcal{S}_b, y_2 \in \mathcal{S}_p.
+$$
 
-zsf sge 
+The above problem can be easily solved by the alternating direction method of multipliers (ADMM). 
 
 
 ## [Python usage](#python-usage)
