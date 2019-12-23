@@ -4,7 +4,23 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 * [Matlab](matlab): full codes and full demos to reproduce all reported results in the manuscript.
 * [Python](python): full codes and one simple demo to demonstrate the usage. 
 
-## Basic idea
+# Contents
+
+* [Basic idea](#basic-idea)
+
+* [Python usages](#python-for-BQP)
+  * [Binary quadratic programming (BQP)](#BQP)
+  * [Demo of image segmentation](#demo-image-seg)
+  
+* [Aplications and extensions](#application-extension)
+  * [Deep model compression](#deep-model-compression)
+  * [MAP inference](#map-inference)
+  * [K-means clustering](#kmeans)
+  * [others](#others)
+  
+* [Citation](#citation)
+
+## [Basic idea](#basic-idea)
 
 [Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
 $$
@@ -24,8 +40,9 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## Python usages for binary quadratic programming (BQP) 
+## [Python usages for binary quadratic programming (BQP)](#python-for-BQP) 
 
+### [Binary quadratic programming (BQP)](#BQP)
 Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
@@ -61,7 +78,7 @@ $$
 -->
 
 
-### Demo
+### [Demo](#demo-image-seg)
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
@@ -71,9 +88,9 @@ The randomly initialized image and the segmentation result are shown as follows
 <img src="/python/demo/show_image.png">
 </div>
 
-## Aplications and extensions
+## [Aplications and extensions](#application-extension)
 
-#### 1. [Model compression for deep neural networks](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019)
+#### 1. [Deep model compression](#deep-model-compression)
 
 We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
 
@@ -83,7 +100,7 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
 
-#### 2. MAP inference for probabilistic graphical models
+#### 2. [MAP inference for probabilistic graphical models](#map-inference)
 
 This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
 
@@ -110,7 +127,7 @@ Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reform
       
       
 
-## Citation
+## [Citation](#citation)
 If you adopt the Lp-Box ADMM algorithm in your project, please cite as follows.
 ```
 @article{wu2018lp,
