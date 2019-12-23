@@ -4,7 +4,7 @@ Lpbox-ADMM ([main manuscript](https://ieeexplore.ieee.org/document/8378001/), [s
 * [Matlab](matlab): full codes and full demos to reproduce all reported results in the manuscript.
 * [Python](python): full codes and one simple demo to demonstrate the usage. 
 
-**IMPORTANT NOTE:** We have just provided the implementation of Lp-Box ADMM for the BQP problem. However, Lp-Box ADMM can be naturally applied to ANY IP tasks. One can easily implement Lp-Box ADMM for their own IP problems, by simply replacing the provided QP objective in our code by their own objective functions. Welcome to contribute your IP tasks and implementations to this repository. 
+**IMPORTANT:** We have just provided the implementation of Lp-Box ADMM for the BQP problem. However, Lp-Box ADMM can be naturally applied to ANY IP tasks. One can easily implement Lp-Box ADMM for their own IP problems, by simply replacing the provided QP objective in our code by their own objective functions. Welcome to contribute your IP tasks and implementations to this repository. 
 
 ## Contents
   
