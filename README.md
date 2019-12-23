@@ -87,17 +87,28 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
 
-#### MAP inference for probabilistic graphical models
+#### 2. MAP inference for probabilistic graphical models
 
-MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph), as follows
-$$
-\text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\g_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\g_{\alpha}).
-$$
+This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
 
-30. MAP Inference via L2-Sphere Linear Program Reformulation
-      Baoyuan Wu, Li Shen, Tong Zhang, Bernard Ghanem
-        Accepted to International Journal of Computer Vision (IJCV).
-      (This work proposed a equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT           solution. Codes will be released soon.)
+MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph). 
+
+* MAP inference of a MRF model
+$$
+  \mathop{\min}_x \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha})
+$$ 
+
+* MAP inference as integer programming 
+$$
+  \mathop{\min}_x \text{ILP}(\boldsymbol{\theta}) = \max_{\boldsymbol{\mu}} 
+  \sum_{i\in V} \boldsymbol{\theta}_i^\top \boldsymbol{\mu}_i + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}^\top \boldsymbol{\mu}_{\alpha}
+ =
+  \max_{\boldsymbol{\mu}}  \langle \boldsymbol{\theta}, \boldsymbol{\mu} \rangle, ~
+ \text{s.t.} ~  \boldsymbol{\mu} \in \mathcal{L}_G \cap \{0,1\}^{|\boldsymbol{\mu}|},
+$$ 
+
+Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT solution.
+
       
       
 
