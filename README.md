@@ -105,6 +105,10 @@ $$
  \text{s.t.} ~  \boldsymbol{\mu} \in \mathcal{L}_G \cap \{0,1\}^{|\boldsymbol{\mu}|},
 $$ 
 
+$$
+  \mathop{\min}_x \ \text{ILP}(\boldsymbol{\theta}) = \max_{\boldsymbol{\mu}} \sum_{i\in V} \boldsymbol{\theta}_i^\top \boldsymbol{\mu}_i 
+$$  
+
 Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT solution.
 
       
