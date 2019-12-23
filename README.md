@@ -179,7 +179,8 @@ Looking forward to more applications using Lp-Box ADMM.
 ## [Citation](#citation)
 [[back to top](#)]
 
-If any problem, feel free to contact with [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home) (wubaoyuan1987@gmail.com).
+If our work is helpful to your work, please cite as follows.
+If any question or suggestion, plesse [send email](mailto:wubaoyuan1987@gmail.com) to [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home).
 
 ```
 @article{wu2018lp,
@@ -190,4 +191,9 @@ If any problem, feel free to contact with [Baoyuan Wu](https://sites.google.com/
   publisher={IEEE}
 }
 ```
+
+# [Copyright](#copyright)
+[[back to top](#)]
+
+The contents of this repository, including the codes and documents are released under an [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause) license. Please refer to [LICENSE](LICENSE) for more details.
 
