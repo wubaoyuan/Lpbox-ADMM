@@ -64,14 +64,13 @@ from functions.lpbox_admm import ADMM_bqp_linear_eq_and_ineq
 ```
 
 ## Demo
-To help you quickly understand the how to use this algorithm, we present a simple demo of image segmentation by solving unconstrained BQP problem. The demo calls the ```ADMM_bqp_unconstrained``` function to solve the unconstrained BQP problem, you can run the following code to have a try.
+We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
 ```
-We randomly initalize the image with 0,1 and optimize the image to the segmentation result.
-
+The randomly initialized image and the segmentation result are shown as follows
 <div align="center">
-<img src="/demo/show_image.png">
+<img src="/python/demo/show_image.png">
 </div>
 
 ## Other applications
