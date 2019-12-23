@@ -1,0 +1,111 @@
+Robust Point Matching (RPM) Demo (version 20000427):
+----------------------------------------------------
+Copyright (C) 2000 Haili Chui, Anand Rangarajan
+
+Authors: Haili Chui and Anand Rangarajan
+Date:    04/27/2000
+
+Contact Information:
+
+Haili Chui:		chui@noodle.med.yale.edu
+Anand Rangarajan:	anand@noodle.med.yale.edu
+
+Contents: 
+
+This package of MATLAB M-files provides a demo for the 
+Robust Point Matching (RPM) algorithm. Five example data 
+point-sets are included. We also provide a simple GUI to 
+load the data and start the demo. All the source code 
+(M-files) required to execute RPM are included. 
+
+Terms:	  
+
+The source code (M-files) are provided under the
+terms of the GNU General Public License with an explicit
+clause permitting the execution of the M-files from within
+a MATLAB environment. See the LICENSE file for details.
+
+Details:
+
+1. Major files included in this demo:
+
+   rpm_demo.m     --- RPM demos with a GUI.
+   rpm_demo_cmd.m --- RPM demos without GUI.
+   
+   cMIX.m         --- Main point matching function.
+                      (Both RPM and ICP included).
+
+2. How to run the demo:
+
+   For "rpm_demo":
+
+   (1) Run matlab. We have tested the code with MATLAB 5.2.
+   (2) Type the command at matlab prompt:
+       >> rpm_demo;
+   (3) Click "1"-"5" button to load demo data.
+   (4) Click "RPM" button or "ICP" button to run the program.
+
+   For "rpm_demo_cmd.m", please refer to the header for its usage.
+
+3. How to use "cMIX.m".
+
+   The portion of the name "MIX" comes from "mixture modeling", 
+   because the robust point matching algorithm (RPM) is
+   closely related to the Gaussian mixture model in
+   probability density estimation.
+
+   The program basically does an alternating estimation
+   of the correspondence and the transformation parameters,
+   which are the two unknown variables in the point
+   matching problem. This is controlled by a pre-defined
+   "annealing" process. (Please check the references for
+   more details).
+
+   Basic usage of "cMIX.m":
+   ------------------------
+   cMIX (point_set1, point_set2, fraction, T_init, T_final_factor);   
+
+   A common example:
+   -----------------
+   cMIX (x,y, 2, 0.1, 100);
+   
+   Explanation:
+   ------------
+   x,y -- two point-sets.
+   2   -- take every 2nd point in both x and y, and only use those
+          for the matching. (if fraction == 1, every point will be used).
+   0.1 -- T_init.
+   100 -- T_final = 0.1 / 100 = 0.001.
+
+4. Deformation between the point-sets:
+
+   Non-rigidly related point-sets are matched in this demo (as you
+   will see in the examples). We model the non-rigidity through a 
+   smooth spline function --  the thin-plate spline (TPS). For more
+   details, please check the references.
+
+   Note: As discussed in the referenced work, the RPM algorithm
+   is a general point matching algorithm which can be used with
+   any rigid or non-rigid transformation. The source code is a 
+   demonstration of RPM using the TPS as the non-rigid transformation.
+   It can be readily modified to incorporate other transformations.
+
+5. References for the codes:
+
+   (1) H. Chui and A. Rangarajan,
+       "A new algorithm for non-rigid point matching", 
+       IEEE Conference on Computer Vision and Pattern Recognition
+       (CVPR) 2000, (in press).
+
+   (2) H. Chui and A. Rangarajan,
+       "A feature registration framework using mixture models", 
+       IEEE Workshop on Mathematical Methods in Biomedical Image
+       Analysis (MMBIA) 2000, (in press).    
+       
+    The references are available on our website at:
+    http://noodle.med.yale.edu/~chui/tps-rpm.html    
+
+    Further references on Robust Point Matching can be found at: 
+    http://noodle.med.yale.edu/~anand/
+
+--- end of the file ---
