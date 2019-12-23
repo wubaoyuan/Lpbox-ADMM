@@ -195,5 +195,5 @@ If any question or suggestion, plesse [send email](mailto:wubaoyuan1987@gmail.co
 ## [Copyright](#copyright)
 [[back to top](#)]
 
-The contents of this repository, including the codes and documents are released under an [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause) license. Please refer to [LICENSE](LICENSE) for more details.
+The contents of this repository, including the codes and documents are released under an [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause) license. 
 
