@@ -126,6 +126,9 @@ This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program
 MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph). 
 
 * MAP inference of a MRF model
+
+$$\mathop{\min}_x  \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha})$$
+
 \begin{equation}
   \mathop{\min}_x  \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha})
 \end{equation}
