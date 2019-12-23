@@ -30,13 +30,13 @@ Lpbox-ADMM ([main manuscript](https://ieeexplore.ieee.org/document/8378001/), [s
 
 Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, in the following we focus on the following problem with binary constraints:
 $$
-  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
+  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{ 0,1 \}^n, x \in \mathcal{C}
 $$
 
 #### [Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
 We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
-  x \in \{0,1\}^n \Leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
+  \{ 0,1 \}^n \Leftrightarrow  \[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
 $$  
 
 where $\mathcal{S}_b = \[0,1\]^n$ is called box-constraint, and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ is denoted as $\ell_p$-norm constraint.
