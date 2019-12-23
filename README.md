@@ -18,10 +18,10 @@ This project provides two implementations of Lp-Box ADMM:
   * [Demo of image segmentation](#demo-of-image-segmentation)
   
 * [Applications and extensions](#applications-and-extensions)
-  * [Deep model compression](#deep-model-compression)
-  * [MAP inference](#map-inference)
-  * [K-means clustering](#K-means-clustering)
-  * [Others](#others)
+  * [1 Deep model compression](#1-deep-model-compression)
+  * [2 MAP inference for probabilistic graphical models](#2-map-inference-for-probabilistic-graphical-models)
+  * [3 Kmeans clustering](#3-kmeans-clustering)
+  * [4 Others](#4-others)
   
 * [Citation](#citation)
 
@@ -34,7 +34,7 @@ $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
-#### Idea 1: [Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
+#### [Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
 We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
@@ -47,7 +47,7 @@ The geometric illustration of the constraint equivalence is presented as follows
 <img src="/lpbox.png">
 </div>
 
-#### Idea 2: [Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
+#### [Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
 We further introduce two extra variables $y_1$ and $y_2$ to split the constraints onto different variables, such that the constraints can be iteratively/gradually satisfied, as follows
 $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}, x=y_1, x=y_2, y_1 \in \mathcal{S}_b, y_2 \in \mathcal{S}_p.
@@ -108,7 +108,7 @@ The randomly initialized image and the segmentation result are shown as follows
 ## [Applications and extensions](#applications-and-extensions)
 [[back to top](#)]
 
-#### 1. [Deep model compression](#deep-model-compression)
+#### [1 Deep model compression](#1-deep-model-compression)
 
 We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
 
@@ -142,9 +142,9 @@ $$
 
 Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT solution.
 
-#### 3. [K-means clustering](#K-means-clustering)
+#### [3 Kmeans clustering](#3-kmeans-clustering)
 
-#### 4. [Others](#others)
+#### 4 [Others](#4-others)
       
 
 ## [Citation](#citation)
