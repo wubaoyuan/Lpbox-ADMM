@@ -8,6 +8,7 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 
 * [Basic idea](#basic-idea)
 * [Python usages](#python-for-BQP)
+
   * [Binary quadratic programming (BQP)](#BQP)
   * [Demo of image segmentation](#demo-image-seg)
   
