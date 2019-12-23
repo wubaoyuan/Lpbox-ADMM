@@ -21,6 +21,7 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 * [Citation](#citation)
 
 ## [Basic idea](#basic-idea)
+[[back to top](#)]
 
 [Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
 $$
@@ -40,7 +41,8 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## [Python usages](#python-for-BQP) 
+## [Python usages](#python-for-BQP)
+[[back to top](#)]
 
 ### [Binary quadratic programming (BQP)](#BQP)
 Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
