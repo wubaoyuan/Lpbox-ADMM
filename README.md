@@ -7,6 +7,11 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 ## Contents
   
 * [Basic idea](#basic-idea)
+
+* [Python usage](#python-usage)
+
+* [Aplications and extensions](#application-extension)
+
   * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
 
   * [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
