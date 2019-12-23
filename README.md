@@ -8,23 +8,20 @@ This project provides two implementations of Lp-Box ADMM:
 ## Contents
   
 * [Basic idea](#basic-idea)
-
+  * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
+  * [Idea 2: Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
+  
 * [Python usage](#python-usage)
-* [Applications](#applications)
-* [Citation](#citation)
-
-<!---
-  * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
-  * [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
-* [Python usage](#python-usage)
-  * [Binary quadratic programming](#BQP)
-  * [Demo of image segmentation](#demo-image-seg)
-* [Aplications and extensions](#application-extension)
+  * [Binary quadratic programming](#binary-quadratic-programming)
+  * [Demo of image segmentation](#demo-of-image-segmentation)
+  
+* [Applications and extensions](#applications-and-extensions)
   * [Deep model compression](#deep-model-compression)
   * [MAP inference](#map-inference)
-  * [K-means clustering](#kmeans)
-  * [others](#others)
---->
+  * [K-means clustering](#K-means-clustering)
+  * [Others](#others)
+  
+* [Citation](#citation)
 
 
 ## [Basic idea](#basic-idea)
@@ -35,7 +32,7 @@ $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
-#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
 We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
@@ -48,7 +45,7 @@ The geometric illustration of the constraint equivalence is presented as follows
 <img src="/lpbox.png">
 </div>
 
-#### [Idea 2: Constraint splitting via extra variables](#constraint-splitting)
+#### [Idea 2: Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
 We further introduce two extra variables $y_1$ and $y_2$ to split the constraints onto different variables, such that the constraints can be iteratively/gradually satisfied, as follows
 $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}, x=y_1, x=y_2, y_1 \in \mathcal{S}_b, y_2 \in \mathcal{S}_p.
@@ -60,7 +57,7 @@ The above problem can be easily solved by the alternating direction method of mu
 ## [Python usage](#python-usage)
 [[back to top](#)]
 
-### [Binary quadratic programming (BQP)](#BQP)
+### [Binary quadratic programming](#binary-quadratic-programming)
 Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
@@ -96,7 +93,7 @@ $$
 -->
 
 
-### [Demo of image segmentation](#demo-image-seg)
+### [Demo of image segmentation](#demo-of-image-segmentation)
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
@@ -106,7 +103,7 @@ The randomly initialized image and the segmentation result are shown as follows
 <img src="/python/demo/show_image.png">
 </div>
 
-## [Applications](#applications)
+## [Applications and extensions](#applications-and-extensions)
 [[back to top](#)]
 
 #### 1. [Deep model compression](#deep-model-compression)
@@ -119,7 +116,7 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
 
-#### 2. [MAP inference for probabilistic graphical models](#map-inference)
+#### 2. [MAP inference for probabilistic graphical models](#map-inference-for-probabilistic-graphical-models)
 
 This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
 
@@ -143,7 +140,9 @@ $$
 
 Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reformulation to the original integer programming of           MAP inference, which was then efficiently solved by ADMM. It is globally convergent to epsilon-KKT solution.
 
-      
+#### 3. [K-means clustering](#K-means-clustering)
+
+#### 4. [Others](#others)
       
 
 ## [Citation](#citation)
