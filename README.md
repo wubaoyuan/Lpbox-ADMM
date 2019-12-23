@@ -44,7 +44,7 @@ where $\mathcal{S}_b = \[0,1\]^n$ is called box-constraint, and $\mathcal{S}_p =
 
 The geometric illustration of the constraint equivalence is presented as follows. For clarity, we just show the cases when p={1,2,5}.
 <div align="center">
-<img src="/lpbox.png">
+<img src="/lpbox.png"  width="500"/>
 </div>
 
 #### [Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
@@ -102,7 +102,7 @@ python demo_image_segmentation.py
 ```
 The randomly initialized image and the segmentation result are shown as follows
 <div align="center">
-<img src="/python/demo/show_image.png">
+<img src="/python/demo/show_image.png"  width="600"/>
 </div>
 
 ## [Applications and extensions](#applications-and-extensions)
@@ -115,7 +115,7 @@ This work has been published in CVPR 2019, "Compressing Convolutional Neural Net
 We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
 
 <div align="center">
-<img src="/figures/CNN-FCF.png">
+<img src="/figures/CNN-FCF.png"  width="600"/>
 </div>
 
 
@@ -154,10 +154,11 @@ $$
 
 It is easily proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta})$.  LS-LP can be efficiently solved by ADMM, which is proved to be globally convergent to epsilon-KKT solution of the original MAP inference.
 
-<div align="center">
-<img src="/figures/factor-graph.png">
-</div>
 
+
+<div align="center">
+<img src="/figures/factor-graph.png"  width="500"/>
+</div>
 
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
