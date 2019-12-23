@@ -1,6 +1,7 @@
 # Lp-Box ADMM for Integer Programming
 
-This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ieee.org/document/8378001/) using
+[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. 
+This project provides two implementations of Lp-Box ADMM:
 * [Matlab](matlab): full codes and full demos to reproduce all reported results in the manuscript.
 * [Python](python): full codes and one simple demo to demonstrate the usage. 
 
@@ -9,6 +10,8 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 * [Basic idea](#basic-idea)
 
 * [Python usage](#python-usage)
+
+* [Applications](#application)
 
 * [Aplications and extensions](#application-extension)
 
@@ -31,7 +34,7 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 ## [Basic idea](#basic-idea)
 [[back to top](#)]
 
-[Lpbox-ADMM](https://ieeexplore.ieee.org/document/8378001/) is a general optimization method for ANY interger programming. Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, we focus on the following problem with binary constraints:
+Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, in the following we focus on the following problem with binary constraints:
 $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
@@ -43,8 +46,8 @@ $$
 $$  
 
 where $\mathcal{S}_b = \[0,1\]^n$ is called box-constraint, and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ is denoted as $\ell_p$-norm constraint.
-The geometric illustration of the equivalence between lpbox intersection and the set of binary points is presented as follows. For clarity, we just show the cases when p={1,2,5}
 
+The geometric illustration of the constraint equivalence is presented as follows. For clarity, we just show the cases when p={1,2,5}.
 <div align="center">
 <img src="/lpbox.png">
 </div>
@@ -107,7 +110,7 @@ The randomly initialized image and the segmentation result are shown as follows
 <img src="/python/demo/show_image.png">
 </div>
 
-## [Aplications and extensions](#application-extension) 
+## [Applications](#application)
 
 #### 1. [Deep model compression](#deep-model-compression)
 
