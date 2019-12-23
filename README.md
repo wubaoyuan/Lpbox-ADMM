@@ -10,8 +10,8 @@ This project provides two implementations of Lp-Box ADMM:
 ## Contents
   
 * [Basic idea](#basic-idea)
-  * [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
-  * [Idea 2: Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
+  * [Idea 1: Equivalent replacement of binary constraint](#idea-1:-equivalent-replacement-of-binary-constraint)
+  * [Idea 2: Constraint splitting via extra variables](#idea-2:-constraint-splitting-via-extra-variables)
   
 * [Python usage](#python-usage)
   * [Binary quadratic programming](#binary-quadratic-programming)
@@ -34,7 +34,7 @@ $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
-#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
+#### [Idea 1: Equivalent replacement of binary constraint](#idea-1:-equivalent-replacement-of-binary-constraint)
 We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
@@ -47,7 +47,7 @@ The geometric illustration of the constraint equivalence is presented as follows
 <img src="/lpbox.png">
 </div>
 
-#### [Idea 2: Constraint splitting via extra variables](#constraint-splitting-via-extra-variables)
+#### [Idea 2: Constraint splitting via extra variables](#idea-2:-constraint-splitting-via-extra-variables)
 We further introduce two extra variables $y_1$ and $y_2$ to split the constraints onto different variables, such that the constraints can be iteratively/gradually satisfied, as follows
 $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}, x=y_1, x=y_2, y_1 \in \mathcal{S}_b, y_2 \in \mathcal{S}_p.
