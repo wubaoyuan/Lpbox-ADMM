@@ -111,6 +111,7 @@ The randomly initialized image and the segmentation result are shown as follows
 </div>
 
 ## [Applications](#application)
+[[back to top](#)]
 
 #### 1. [Deep model compression](#deep-model-compression)
 
@@ -150,7 +151,10 @@ Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reform
       
 
 ## [Citation](#citation)
-If you adopt the Lp-Box ADMM algorithm in your project, please cite as follows.
+[[back to top](#)]
+
+If any problem, feel free to contact with [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home) (wubaoyuan1987@gmail.com).
+
 ```
 @article{wu2018lp,
   title={lp-box ADMM: A versatile framework for integer programming},
@@ -160,4 +164,4 @@ If you adopt the Lp-Box ADMM algorithm in your project, please cite as follows.
   publisher={IEEE}
 }
 ```
-If any problem, feel free to contact with [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home) (wubaoyuan1987@gmail.com).
+
