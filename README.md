@@ -163,7 +163,18 @@ It is easily proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\bolds
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
 
+This work is presented in Arxiv, "Constrained K-means with General Pairwise and Cardinality Constraints"([Arxiv](https://arxiv.org/pdf/1907.10410.pdf)). 
+
+K-means is one of the most popular classic clustering algorithms. However, the orginal K-means is unstable. One enhanced approach is inserting some user preferences (e.g., pairwise constraints) into K-means, using some heuristic strategies. [One recent work](http://www.optimization-online.org/DB_FILE/2005/04/1114.pdf) formulates K-means as an integer programming. Based on this formulation, different types of user preferences can be naturally embedded as constraints, such as cardinality constraints, must/cannot-link constraints. We adopt the Lp-Box ADMM algorithm to optimize this IP problem. 
+
+
 #### [4 Others](#4-others)
+
+The Lp-Box ADMM has been applied to many types of applications, such as [hash code learning](http://cfm.uestc.edu.cn/~fshen/SADH.pdf), 
+[low-density parity-check (LDPC)](https://arxiv.org/pdf/1711.10767.pdf), [feature selection](https://www.ijcai.org/proceedings/2017/0228.pdf), [data hiding](http://www.busim.ee.boun.edu.tr/~sankur/SankurFolder/Conf_EUSIPCO_2018_Robust%20Data%20Hiding.pdf), etc.
+
+Looking forward to more applications using Lp-Box ADMM. 
+
       
 
 ## [Citation](#citation)
