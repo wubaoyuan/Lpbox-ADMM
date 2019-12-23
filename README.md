@@ -125,7 +125,7 @@ This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program
 
 MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph), as follows
 $$
-  \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} \< \boldsymbol{\theta}, \boldsymbol{\mu} \> 
+  \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} < \boldsymbol{\theta}, \boldsymbol{\mu} > 
   ~  \quad \text{s.t.} \quad \boldsymbol{\mu} \in \mathcal{L}_G \cap \{0, 1\}^{|\boldsymbol{\mu}|}.
 $$
 
@@ -147,7 +147,7 @@ $$
 
 Inspired by the idea of Lp-Box ADMM, we firstly remove the binary constraint, while adding the $\ell_2$-sphere constraint onto the variable or the factor nodes. Then, we introduce an extra variable/factor nodes to split the $\ell_2$-sphere constraint. 
 $$
-  \text{LS-LP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} \< \boldsymbol{\theta}, \boldsymbol{\mu} \> 
+  \text{LS-LP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} < \boldsymbol{\theta}, \boldsymbol{\mu} > 
   ~  \quad \text{s.t.} \quad \boldsymbol{\mu} \in \mathcal{L}_G, \boldsymbol{v} \in \mathcal{S}, \boldsymbol{\mu}_i = \boldsymbol{v}_i, 
   i \in V.
 $$
