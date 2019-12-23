@@ -24,46 +24,42 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## Binary quadratic programming (BQP) 
-In this project, we specify the optimization object as the QP problem with binary constraints. The BQP problem can be denoted as follows:
+## Python usages for binary quadratic programming (BQP) 
+
+Since many important applications can be formulated as BQP, in this project we present the demo of using Lp-Box ADMM to solve the BQP problem, which is formulated as follows
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
 $$
 
 which includes the binary constraint, linear equality and inequality constraint. 
-
-## Python usages
-
-### Functions
-To facilitate the usages of the Lp-Box ADMM method, we provide four python functions for the BQP problems with different constraints.  
-* unconstrained BQP  
-$$
-  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n
-$$  
-
-
-* BQP with linear equality constraints 
-$$
-  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1
-$$
-
-* BQP with linear inequality constraints 
-$$
-  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_2 x \leq d_2
-$$  
-
-* BQP with linear equality and inequality constraints 
-$$
-  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
-$$  
-
-To use these functions, you need to import them to your demo, as follows
+To facilitate the usages, we provide four python functions for the BQP problems with different constraints.  
+To use these functions, you just need to import them to your demo, as follows
 ```
 from functions.lpbox_admm import ADMM_bqp_unconstrained
 from functions.lpbox_admm import ADMM_bqp_linear_eq
 from functions.lpbox_admm import ADMM_bqp_linear_ineq
 from functions.lpbox_admm import ADMM_bqp_linear_eq_and_ineq
 ```
+
+<!---
+* unconstrained BQP  
+$$
+  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n
+$$  
+* BQP with linear equality constraints 
+$$
+  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1
+$$
+* BQP with linear inequality constraints 
+$$
+  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_2 x \leq d_2
+$$  
+* BQP with linear equality and inequality constraints 
+$$
+  \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
+$$  
+-- >
+
 
 ### Demo
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
