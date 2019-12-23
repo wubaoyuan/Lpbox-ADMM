@@ -118,7 +118,7 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
 
-#### 2. [MAP inference for probabilistic graphical models](#map-inference-for-probabilistic-graphical-models)
+#### [2 MAP inference for probabilistic graphical models](#2-map-inference-for-probabilistic-graphical-models)
 
 This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
 
@@ -144,7 +144,7 @@ Inspired by the idea of Lp-Box ADMM, we proposed an equivalent continuous reform
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
 
-#### 4 [Others](#4-others)
+#### [4 Others](#4-others)
       
 
 ## [Citation](#citation)
