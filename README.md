@@ -31,7 +31,7 @@ $$
   \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{0,1\}^n, x \in \mathcal{C}
 $$
 
-#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement)
+#### [Idea 1: Equivalent replacement of binary constraint](#equivalent-replacement) 
 We propose to replace the binary constraint with an equivalent set of continuous constraints.  
 $$
   x \in \{0,1\}^n \leftrightarrow x\in\[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
