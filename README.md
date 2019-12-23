@@ -123,7 +123,11 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
 
-MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph). 
+MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph), as follows
+$$
+  \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} \< \boldsymbol{\theta}, \boldsymbol{\mu} \> 
+  ~  \quad \text{s.t.} \quad \boldsymbol{\mu} \in \mathcal{L}_G \cap \{0, 1\}^{|\boldsymbol{\mu}|}.
+$$
 
 <!---
 * MAP inference of a MRF model
@@ -142,13 +146,13 @@ $$
 --->
 
 Inspired by the idea of Lp-Box ADMM, we firstly remove the binary constraint, while adding the $\ell_2$-sphere constraint onto the variable or the factor nodes. Then, we introduce an extra variable/factor nodes to split the $\ell_2$-sphere constraint. 
-It is easily proved that it is an equivalent continuous reformulation to the original integer programming of MAP inference, which was then efficiently solved by ADMM. And, we prove that it is globally convergent to epsilon-KKT solution.
-
 $$
   \text{LS-LP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} \< \boldsymbol{\theta}, \boldsymbol{\mu} \> 
   ~  \quad \text{s.t.} \quad \boldsymbol{\mu} \in \mathcal{L}_G, \boldsymbol{v} \in \mathcal{S}, \boldsymbol{\mu}_i = \boldsymbol{v}_i, 
   i \in V.
 $$
+
+It is easily proved that it is an equivalent continuous reformulation to the original integer programming of MAP inference, which was then efficiently solved by ADMM. And, we prove that it is globally convergent to epsilon-KKT solution.
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
 
