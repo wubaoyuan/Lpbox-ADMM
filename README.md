@@ -24,7 +24,7 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## Binary Quadratic Programming (BQP) 
+## Binary quadratic programming (BQP) 
 In this project, we specify the optimization object as the QP problem with binary constraints. The BQP problem can be denoted as follows:
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
@@ -33,6 +33,8 @@ $$
 which includes the binary constraint, linear equality and inequality constraint. 
 
 ## Python usages
+
+### Functions
 To facilitate the usages of the Lp-Box ADMM method, we provide four python functions for the BQP problems with different constraints.  
 * unconstrained BQP  
 $$
@@ -63,7 +65,7 @@ from functions.lpbox_admm import ADMM_bqp_linear_ineq
 from functions.lpbox_admm import ADMM_bqp_linear_eq_and_ineq
 ```
 
-## Demo
+### Demo
 We present a simple demo of image segmentation by solving unconstrained BQP problem, which calls the ```ADMM_bqp_unconstrained``` function, as follows
 ```
 python demo_image_segmentation.py
@@ -73,10 +75,17 @@ The randomly initialized image and the segmentation result are shown as follows
 <img src="/python/demo/show_image.png">
 </div>
 
-## Other applications
-1. #### [Model compression](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019)
+## Aplications and extensions
+1. #### [Model compression for deep neural networks](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019)
 
-This work proposes to conduct filter selection and filter learning in a unified model. They define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary scalar, as well as a dot-product operator between them. They train a CNN model with factorized convolutional filters (CNN-FCF) by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method.
+We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
+
+<div align="center">
+<img src="/figures/CNN-FCF.png">
+</div>
+
+This work has been published in CVPR 2019, "Compressing Convolutional Neural Networks via Factorized Convolutional Filters" ([pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper.pdf), [github](https://github.com/wubaoyuan/CNN-FCF-CVPR-2019))
+
 
 ## Citation
 If you adopt the Lp-Box ADMM algorithm in your project, please cite as follows.
