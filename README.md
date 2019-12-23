@@ -58,7 +58,7 @@ $$
 $$
   \mathop{\min}_x \ x^\top Ax+b^\top \quad \text{s.t.} \ x \in \{0,1\}^n, C_1 x=d_1, C_2 x \leq d_2
 $$  
--- >
+-->
 
 
 ### Demo
