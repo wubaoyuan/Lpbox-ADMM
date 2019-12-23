@@ -155,12 +155,9 @@ $$
 It is easily proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta})$.  LS-LP can be efficiently solved by ADMM, which is proved to be globally convergent to epsilon-KKT solution of the original MAP inference.
 
 <div align="center">
-<img src="/figures/factor-graph.pdf">
+<img src="/figures/factor-graph.png">
 </div>
 
-<div align="center">
-\includegraphics[width=8in]{/figures/factor-graph.pdf} <br>
-</div>
 
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
