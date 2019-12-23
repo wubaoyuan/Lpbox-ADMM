@@ -127,14 +127,16 @@ MAP inference is a fundamental task in probabilistic graphical models, which aim
 
 * MAP inference of a MRF model
 
-$$\mathop{\min}_x  \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha})$$
+$$ 
+   \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha}) 
+$$
 
 \begin{equation}
   \mathop{\min}_x  \text{MAP}(\boldsymbol{\theta}) = \max_{\mathbf{G} \in \mathcal{X}} \sum_{i\in V} \boldsymbol{\theta}_i(\mathbf{g}_i) + \sum_{\alpha \in F} \boldsymbol{\theta}_{\alpha}(\mathbf{g}_{\alpha})
 \end{equation}
 
 $$
-  \mathop{\min}_x  \text{MAP}(\boldsymbol{\theta}) = 
+  \text{MAP}(\boldsymbol{\theta}) =  \mathop{\max}_{\mathbf{G} \in \mathcal{X}} \mathop{\sum}
 $$ 
 
 $$
