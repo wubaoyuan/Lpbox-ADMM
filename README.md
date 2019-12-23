@@ -103,7 +103,7 @@ The randomly initialized image and the segmentation result are shown as follows
 <img src="/python/demo/show_image.png">
 </div>
 
-## [Aplications and extensions](#application-extension)
+## [Aplications and extensions](#application-extension) 
 
 #### 1. [Deep model compression](#deep-model-compression)
 
