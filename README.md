@@ -7,6 +7,9 @@ This project provides two implementations of [Lp-Box ADMM](https://ieeexplore.ie
 ## Contents
 
 * [Basic idea](#basic-idea)
+
+* [Python usage](#python-usage)
+
 * [Python usages](#python-for-BQP)
 
   * [Binary quadratic programming (BQP)](#BQP)
@@ -41,7 +44,7 @@ The geometric illustration of the equivalence between lpbox intersection and the
 </div>
 
 
-## [Python usages](#python-for-BQP)
+## [Python usage](#python-usage)
 [[back to top](#)]
 
 ### [Binary quadratic programming (BQP)](#BQP)
