@@ -158,6 +158,10 @@ It is easily proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\bolds
 <img src="/figures/factor-graph.pdf">
 </div>
 
+<div align="center">
+\includegraphics[width=8in]{/figures/factor-graph.pdf} <br>
+</div>
+
 
 #### [3 Kmeans clustering](#3-kmeans-clustering)
 
