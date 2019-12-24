@@ -169,7 +169,7 @@ K-means is one of the most popular classic clustering algorithms. However, the o
 
 #### [4 Others](#4-others)
 
-The Lp-Box ADMM method has been adopted by many researchers to solve multiple diverse applications, such as [hash code learning](http://cfm.uestc.edu.cn/~fshen/SADH.pdf), 
+The Lp-Box ADMM method has been adopted by many researchers to solve multiple diverse applications and showing very promising performance, such as [hash code learning](http://cfm.uestc.edu.cn/~fshen/SADH.pdf), 
 [low-density parity-check (LDPC)](https://arxiv.org/pdf/1711.10767.pdf), [feature selection](https://www.ijcai.org/proceedings/2017/0228.pdf), [data hiding](http://www.busim.ee.boun.edu.tr/~sankur/SankurFolder/Conf_EUSIPCO_2018_Robust%20Data%20Hiding.pdf), etc.
 
 Looking forward to more applications using Lp-Box ADMM :)
