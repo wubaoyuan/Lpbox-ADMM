@@ -34,14 +34,14 @@ $$
 $$
 
 #### [Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
-We propose to replace the binary constraint with an equivalent set of continuous constraints.  
+We propose to replace the binary constraint with the intersection of two continuous constraints.  
 $$
   \{ 0,1 \}^n \Leftrightarrow  \[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
 $$  
 
-where $\mathcal{S}_b = \[0,1\]^n$ is called box-constraint, and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ is denoted as $\ell_p$-norm constraint.
+where $\mathcal{S}_b = \[ 0,1 \]^n$ denotes the box constraint (convex), and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ indicates the $\ell_p$-sphere constraint (non-convex).
 
-The geometric illustration of the constraint equivalence is presented as follows. For clarity, we just show the cases when p={1,2,5}.
+The geometric illustration of the constraint equivalence is shown as follows. For clarity, we just show the cases when p={1,2,5}, while p can be any value in the range $(0, \infty)$.
 <div align="center">
 <img src="/lpbox.png"  width="500"/>
 </div>
