@@ -30,13 +30,13 @@ Lpbox-ADMM ([main manuscript](https://ieeexplore.ieee.org/document/8378001/), [s
 
 Since any discrete constraint can be easily transformed to the binary constraint with an additional simplex constraint, in the following we focus on the following problem with binary constraints:
 $$
-  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in \{ 0,1 \}^n, x \in \mathcal{C}
+  \mathop{\min}_x \ f(x) \quad \text{s.t.} \quad x \in { 0,1 }^n, x \in \mathcal{C}
 $$
 
 #### [Equivalent replacement of binary constraint](#equivalent-replacement-of-binary-constraint)
 We propose to replace the binary constraint with the intersection of two continuous constraints.  
 $$
-  \{ 0,1 \}^n \Leftrightarrow  \[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
+  { 0,1 }^n \Leftrightarrow  \[0,1\]^n \cap \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}
 $$  
 
 where $\mathcal{S}_b = \[ 0,1 \]^n$ denotes the box constraint (convex), and $\mathcal{S}_p = \{||x-\frac{1}{2}||_p^p=\frac{n}{2^p}\}$ indicates the $\ell_p$-sphere constraint (non-convex).
@@ -114,7 +114,7 @@ This work has been published in CVPR 2019, "Compressing Convolutional Neural Net
 We applied the idea of Lp-Box ADMM to deep model compression, which learns and selects the convolutional filters in a unified model. Specifically, we fitstly define a factorized convolutional filter (FCF), consisting of a standard real-valued convolutional filter and a binary selection scalar, as well as a dot-product operator between them. Then, we train CNN model with factorized convolutional filters (CNN-FCF), by updating the standard filter using back-propagation, while updating the binary scalar using the alternating direction method of multipliers (ADMM) based optimization method. The framework of the standard filter pruning (top) and the proposed CNN-FCF based pruning (bottom) are shown in the following figure.
 
 <div align="center">
-<img src="/figures/CNN-FCF.png"  width="600"/>
+<img src="/figures/CNN-FCF.png"  width="700"/>
 </div>
 
 
