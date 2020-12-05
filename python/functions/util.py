@@ -46,7 +46,7 @@ def generate_pixel_pairs(nrows,ncols,k):
     offsets = get_offsets(k)
     
     rmat,cmat = np.meshgrid(np.array(range(1,nrows+1)), np.array(range(1,ncols+1)))
-    spatial_indices = np.hstack((cmat.reshape(-1,1),rmat.reshape(-1,1)))
+    spatial_indices = np.hstack((rmat.reshape(-1,1),cmat.reshape(-1,1)))
     
     num_pixels = rmat.size
 
