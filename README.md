@@ -200,6 +200,11 @@ If any question or suggestion, plesse [send email](mailto:wubaoyuan1987@gmail.co
 }
 ```
 
+## [Acknowledgement](#acknowledgement)
+[[back to top](#)]
+
+I would like to thank my interns [Tuanhui Li](https://github.com/tuanhui-li) and [Xingjian Wang](https://github.com/squintingsmile) for their contributions to the implementations of Python and C++, respectively. 
+
 ## [Copyright](#copyright)
 [[back to top](#)]
 
