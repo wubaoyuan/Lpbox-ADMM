@@ -1,0 +1,7 @@
+To run the test, perform the following steps:
+
+1. Use python3 to run CInterface.py e.g. "python3.6 CInterface.py"
+
+2. make all
+
+3. run the demo program with the input file path as argument
