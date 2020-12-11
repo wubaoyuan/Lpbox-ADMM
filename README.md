@@ -191,12 +191,14 @@ If our work is helpful to your work, please cite as follows.
 If any question or suggestion, plesse [send email](mailto:wubaoyuan1987@gmail.com) to [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home).
 
 ```
-@article{wu2018lp,
-  title={lp-box ADMM: A versatile framework for integer programming},
-  author={Wu, Baoyuan and Ghanem, Bernard},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2018},
-  publisher={IEEE}
+@article{wu2019lp,
+  title={lp-Box ADMM: A Versatile Framework for Integer Programming.},
+  author={Wu, B and Ghanem, B},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={41},
+  number={7},
+  pages={1695},
+  year={2019}
 }
 ```
 
