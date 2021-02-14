@@ -21,8 +21,9 @@ Lpbox-ADMM ([main manuscript](https://ieeexplore.ieee.org/document/8378001/), [s
   * [1 Deep model compression](#1-deep-model-compression)
   * [2 MAP inference for probabilistic graphical models](#2-map-inference-for-probabilistic-graphical-models)
   * [3 Sparse adversarial attack](#3-sparse-adversarial-attack)
-  * [4 Kmeans clustering](#4-kmeans-clustering)
-  * [5 Others](#5-others)
+  * [4 Weight attack via bit-flipping](#4-weight-attack)
+  * [5 Kmeans clustering](#5-kmeans-clustering)
+  * [6 Others](#6-others)
   
 * [Citation](#citation)
 
@@ -163,19 +164,25 @@ It is easily proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\bolds
 
 #### [3 Sparse adversarial attack](#3-sparse-adversarial-attack)
 
-
 This work has been accepted to ECCV 2020, "Sparse Adversarial Attack via Perturbation Factorization" ([pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670035.pdf), [github](https://github.com/wubaoyuan/Sparse-Adversarial-Attack)).
 
 It formulates the task of sparse adversarial attack as a mixed integer programming problem (MIP), based on the factorization of each perturbation to its selection factor (binary, 0 or 1) and its perturbation magnitude (continuous). Then, the MIP problem can be efficiently solved by the Lp-Box ADMM algorithm. The proposed method can find the most sensitive pixels in one image. 
 
-#### [4 Kmeans clustering](#4-kmeans-clustering)
+#### [4 Weight attack via bit-flipping](#4-weight-attack)
+
+This work has been accepted to ICLR 2021, "Targeted Attack against Deep Neural Networks via Flipping Limited Weight Bits" ([pdf](https://openreview.net/forum?id=iKQAk8a2kM0), [github](https://github.com/jiawangbai/TA-LBF)). 
+
+Weight attack is a novel attack paradigm of adversarial machine learning, which aims to slightly modifying model parameters at the deployment stage of a machine learning system. In contrast, the well-known adverarial examples and backdoor learning occur at the testing and training stages, respectively. Specifically, our goal is to misclassify a specific sample into a target class without any sample modification, while not significantly reduce the prediction accuracy of other samples to ensure the stealthiness. To this end, we formulate this problem as a binary integer programming (BIP), since the parameters are stored as binary bits (i.e., 0 and 1) in the memory. By utilizing Lp-Box ADMM, we equivalently reformulate this BIP problem as a continuous optimization problem, which can be effectively and efficiently solved using the alternating direction method of multipliers (ADMM) method. Consequently, the flipped critical bits can be easily determined through optimization, rather than using a heuristic strategy. Extensive experiments demonstrate the superiority of our method in attacking DNNs.
+
+
+#### [5 Kmeans clustering](#5-kmeans-clustering)
 
 This work is presented in Arxiv, "Constrained K-means with General Pairwise and Cardinality Constraints"([Arxiv](https://arxiv.org/pdf/1907.10410.pdf)). 
 
 K-means is one of the most popular classic clustering algorithms. However, the orginal K-means is unstable. One enhanced approach is inserting some user preferences (e.g., pairwise constraints) into K-means, using some heuristic strategies. [One recent work](http://www.optimization-online.org/DB_FILE/2005/04/1114.pdf) formulates K-means as an integer programming. Based on this formulation, different types of user preferences can be naturally embedded as constraints, such as cardinality constraints, must/cannot-link constraints. We adopt the Lp-Box ADMM algorithm to optimize this IP problem. 
 
 
-#### [5 Others](#5-others)
+#### [6 Others](#6-others)
 
 The Lp-Box ADMM method has been adopted by many researchers to solve multiple diverse applications and showing very promising performance, such as [hash code learning](http://cfm.uestc.edu.cn/~fshen/SADH.pdf), 
 [low-density parity-check (LDPC)](https://arxiv.org/pdf/1711.10767.pdf), [feature selection](https://www.ijcai.org/proceedings/2017/0228.pdf), [data hiding](http://www.busim.ee.boun.edu.tr/~sankur/SankurFolder/Conf_EUSIPCO_2018_Robust%20Data%20Hiding.pdf), etc.
