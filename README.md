@@ -122,7 +122,7 @@ We applied the idea of Lp-Box ADMM to deep model compression, which learns and s
 
 #### [2 MAP inference for probabilistic graphical models](#2-map-inference-for-probabilistic-graphical-models)
 
-This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), the github project will be released soon).
+This work has been accepted to IJCV, "MAP Inference via L2-Sphere Linear Program Reformulation" ([Arxiv](https://arxiv.org/pdf/1905.03433.pdf), [github](https://github.com/wubaoyuan/LS-LP-MAP-Inference)).
 
 MAP inference is a fundamental task in probabilistic graphical models, which aims to infer the most probable label configuration of a probabilistic graphical model (e.g., MRF, CRF, HMM). MAP inference can be formulated as an integer programming, based on the factor graph (any graphical model can be transformed to a corresponding factor graph), as follows
 $$
