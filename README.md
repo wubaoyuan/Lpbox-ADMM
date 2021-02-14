@@ -21,7 +21,7 @@ Lpbox-ADMM ([main manuscript](https://ieeexplore.ieee.org/document/8378001/), [s
   * [1 Deep model compression](#1-deep-model-compression)
   * [2 MAP inference for probabilistic graphical models](#2-map-inference-for-probabilistic-graphical-models)
   * [3 Sparse adversarial attack](#3-sparse-adversarial-attack)
-  * [4 Weight attack via bit-flipping](#4-weight-attack)
+  * [4 Weight attack via bit-flipping](#4-weight-attack-via-bit-flipping)
   * [5 Kmeans clustering](#5-kmeans-clustering)
   * [6 Others](#6-others)
   
@@ -168,7 +168,7 @@ This work has been accepted to ECCV 2020, "Sparse Adversarial Attack via Perturb
 
 It formulates the task of sparse adversarial attack as a mixed integer programming problem (MIP), based on the factorization of each perturbation to its selection factor (binary, 0 or 1) and its perturbation magnitude (continuous). Then, the MIP problem can be efficiently solved by the Lp-Box ADMM algorithm. The proposed method can find the most sensitive pixels in one image. 
 
-#### [4 Weight attack via bit-flipping](#4-weight-attack)
+#### [4 Weight attack via bit-flipping](#4-weight-attack-via-bit-flipping)
 
 This work has been accepted to ICLR 2021, "Targeted Attack against Deep Neural Networks via Flipping Limited Weight Bits" ([pdf](https://openreview.net/forum?id=iKQAk8a2kM0), [github](https://github.com/jiawangbai/TA-LBF)). 
 
